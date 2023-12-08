@@ -20,6 +20,10 @@
   </head>
 
   <body>
+
+    <!-- Loading Screen -->
+    <div id="loading"></div>
+
     <!-- Parallax Pixel Background Animation -->
     <section class="animated-background">
       <div id="stars1"></div>
@@ -75,5 +79,12 @@
     <div id="hashtag">
       # Code With <span class="heart"> &hearts;</span> by CodeWithJeeens
     </div>
+
+    <script>
+      var loader = document.getElementById("loading");
+      window.addEventListener("load", function(){
+        loader.style.display = "none";
+      })
+    </script>
   </body>
 </html>

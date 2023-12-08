@@ -8,6 +8,7 @@
     --delay: .3s;
 }
 
+
 html, body {
     margin: 0;
     padding: 0;
@@ -22,6 +23,7 @@ html, body {
     background-size: cover;
     position: relative;
     overflow: hidden;
+    background-color: #000;
 }
 
 #profilePicture, #profilePicture img {
@@ -69,6 +71,15 @@ html, body {
     text-decoration: none;
     /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
     -webkit-tap-highlight-color: transparent;
+}
+
+#loading{
+      background: #000 url(img/Load.svg) no-repeat center center;
+      background-size: 20%;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
 }
 
 @media (hover: hover) {
