@@ -82,7 +82,7 @@ html, body {
     width: 100%;
     position: fixed;
     z-index: 100;
-    animation: fade-out 0.3s 1s ease-out forwards;
+    animation: fade-out 1s 1s ease-out forwards;
 }
 
 @keyframes fade-out {
