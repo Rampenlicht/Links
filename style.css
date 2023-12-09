@@ -3,6 +3,7 @@
 :root {
     --bgColor: #223344;
     --bgColor2: #090a0f;
+    --bgtest: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
     --accentColor: #FFF;
     --font: 'Karla', sans-serif;
     --delay: .3s;
@@ -15,7 +16,7 @@ html, body {
     min-height: 100vh;
     font-family: var(--font);
     background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
-    /* background-image: url('https://bit.ly/3nFVqJh'); */
+    /*background-image: url('https://bit.ly/3nFVqJh');/*
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
@@ -23,7 +24,7 @@ html, body {
     background-size: cover;
     position: relative;
     overflow: hidden;
-    background-color: #000;
+    
 }
 
 #profilePicture, #profilePicture img {
@@ -74,12 +75,23 @@ html, body {
 }
 
 #loading{
-      background: #000 url(img/Load.svg) no-repeat center center;
-      background-size: 20%;
-      height: 100vh;
-      width: 100%;
-      position: fixed;
-      z-index: 100;
+    background: #000 url(img/Load.svg) no-repeat center center;
+    background-size: 20%;
+    transition-duration: 2s;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    animation: fade-out 0.3s 1s ease-out forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (hover: hover) {
@@ -166,7 +178,7 @@ html, body {
     visibility: hidden;
     opacity: 0;
     overflow: hidden;
-    transition: .5s ease-in-out;
+    transition: .50 linear;
 }
 
 .popup {
